@@ -42,8 +42,8 @@ data = data.rstrip()
 print(data)
 dataArray = data.split(' ')
 
-print("天地：" + pointToMillimetre(dataArray[4]))
-print("左右：" + pointToMillimetre(dataArray[3]))
+print("天地(mm)：" + pointToMillimetre(dataArray[4]))
+print("左右(mm)：" + pointToMillimetre(dataArray[3]))
 
 f.close()
 
