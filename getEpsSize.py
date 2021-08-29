@@ -39,7 +39,8 @@ data = f.read(end-start).decode()
 # 改行削除
 data = data.rstrip()
 
-print(data)
+# DEBUG用
+# print(data)
 dataArray = data.split(' ')
 
 print("天地(mm)：" + pointToMillimetre(dataArray[4]))
