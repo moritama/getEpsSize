@@ -4,8 +4,8 @@ import re
 
 # 1 point = 1/72 inch
 # 1 inch = 25.4 mm
-def pointToMillimetre(val):
-    res = float(val) / 72 * 25.4
+def pointToMillimetre(val1,val2):
+    res = abs((float(val1)-float(val2)) / 72 * 25.4)
     return str(res)
 
 # ファイル名取得（引数が間違っていたらエラー）
@@ -43,8 +43,8 @@ data = data.rstrip()
 # print(data)
 dataArray = data.split(' ')
 
-print("天地(mm)：" + pointToMillimetre(dataArray[4]))
-print("左右(mm)：" + pointToMillimetre(dataArray[3]))
+print("天地(mm)：" + pointToMillimetre(dataArray[2],dataArray[4]))
+print("左右(mm)：" + pointToMillimetre(dataArray[1],dataArray[3]))
 
 f.close()
 
